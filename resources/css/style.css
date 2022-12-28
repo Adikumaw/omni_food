@@ -180,7 +180,7 @@ h3 {
 
 h2:after {
     display: block;
-    height: 2px;
+    height: 0.1rem;
     background-color: #e67e22;
     content: " ";
     width: 100px;
@@ -259,7 +259,7 @@ input[type=submit]:active {
     FEATURES
  ---------------------------------------*/
 .section-features .long-copy {
-    margin-bottom: 30px;
+    margin-bottom: 1rem;
 }
 
 /*----------------------------------------
@@ -289,12 +289,11 @@ input[type=submit]:active {
     border-radius: 15px;
 }
 .meal-photo span {
-    font-style: oblique;
     position: absolute;
     color: rgb(234, 234, 234);
     z-index: 1;
     font-weight: bold;
-    font-size: 250%;
+    font-size: 200%;
     text-align: center;
     opacity: 0;
     transition: opacity 0.4s;
@@ -366,14 +365,13 @@ input[type=submit]:active {
 }
 .work-steps div {
     color: #e67e22;
-    border: 2px solid #e67e22;
-    display: inline-block;
+    border: 0.1em solid #e67e22;
+    /* display: inline-block; */
     height: 1.8em;
     width: 1.8em;
     border-radius: 50%;
     text-align: center;
     padding: 5px;
-    padding-top: 6px;
     float: left;
     font-size: 140%;
     margin-right: 5%;
