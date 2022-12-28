@@ -1,0 +1,274 @@
+
+/* this is from big tablets to 1200 */
+@media only screen and (max-width: 1220px) {
+
+    section .city-feature {
+        font-size: 96%;
+    }
+    section .plan-box ul li {
+        font-size: 85%;
+    }
+
+}
+
+@media only screen and (max-width: 1070px) {
+    section .plan-box ul li {
+        font-size: 80%;
+    }
+    section .plan-price {
+        font-size: 295%;
+    }
+}
+/* small tablet to big tablet: from 970 to 1023px */
+@media only screen and (max-width: 1023px) {
+    body{font-size: 18px; }
+
+    body section {padding: 60px 0; }
+    header .logo {
+        height: 90px;
+        width: auto;
+        /* float: left; */
+        margin-top: 20px;
+    }
+    section .long-copy {
+        line-height: 135%;
+        width: 80%;
+        margin-left: 10%;
+    }
+    section .box p {
+        line-height: 135%;
+    }
+    section .work-steps:last-of-type {
+        margin-bottom: 3em;
+    }
+    section .btn-app img {
+        height: 45px;
+        width: auto;
+    }
+    section .contact-form {
+        width: 70%;
+    }
+    footer {
+        padding: 40px;
+        font-size: 75%;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+
+    body{font-size: 16px; }
+
+    body section {padding: 40px 0; }
+
+    header .logo {
+        height: 76px;
+        margin-top: 19px;
+    }
+    section .step:last-child {
+        margin-top: 6em;
+    }
+    section .work-steps {
+        font-size: 90%;
+    }
+    section .box img {
+        margin-bottom: 0.8em;
+    }
+    section .city-feature {
+        margin: 0 2% 3px 2%;
+        font-size: 90%;
+    }
+    .section-plans h3 {
+        font-size: 100%;
+        margin-bottom: 12px;
+    }
+    section .plan-box ul li {
+        padding: 3px 0;
+        font-size: 69%;
+    }
+
+    section .plan-price {
+        font-size: 260%;
+        margin-bottom: 8px;
+    }
+    section .plan-price-meal {
+        font-size: 70%;
+    }
+    section .contact-form {
+        width: 80%;
+    }
+    body footer {
+        padding: 30px;
+        font-size: 70%;
+    }
+
+}
+
+@media only screen and (max-height: 739px){
+    html body header{height: 100vh;}
+}
+
+@media only screen and (max-width: 912px) and (min-height: 667px) {
+    html body header{height: 55vh;}
+}
+
+/* small phones to small tablets: from 481 to 767px */
+@media only screen and (max-width: 768px) {
+
+    body {font-size: 15px;}
+
+    header .logo {
+        height: 65px;
+    }
+
+    section .box img {border-radius: 2px; }
+    .section-cities .col:first-child,
+    .section-features .col:first-child {
+        margin-left: 2%;
+    }
+
+    section .step:last-child {
+        margin-top: 5.5em;
+    }
+    section h2 {
+        margin-bottom: 15px;
+    }
+    section .step:first-child {
+        margin-top: 15px;
+    }
+    section .btn-app img {
+        height: 35px;
+    }
+    .section-cities .col,
+    .section-features .col {margin: 2%;}
+    section .span-1-of-4{width: 45%;}
+}
+
+/* single matter at a time */
+
+@media only screen and (max-width: 540px) {
+    
+}
+/* small phones: from zero to 480px */
+@media only screen and (max-width: 480px) {
+
+    body .row {
+        max-width: 100%;
+        margin: 0 2%;
+    }
+
+    body {font-size: 10px;}
+
+    header .main-nav li:last-child {margin-right: 10px;}
+    header .main-nav li {
+        margin-left: 13px;
+        margin-top: 15%;
+    }
+    header .main-nav li a:link, .main-nav li a:visited {
+        padding: 6px 0;}
+    header .logo {
+        margin-left: 12px;
+        height: 55px;
+        margin-top: 19px;
+    }
+    header h1 {
+        margin-bottom: 15px;
+        font-size: 200%;
+        word-spacing: 2px;
+    }
+    body section {
+        padding: 30px 0;
+    }
+    .section-features .long-copy {
+        margin-bottom: 20px;
+    }
+    section .long-copy {
+        line-height: 125%;
+        width: 94%;
+        margin-left: 3%;
+    }
+    section h2 {
+        font-size: 160%;
+        margin-bottom: 16px;
+    }
+    section h2:after {
+        margin: 15px auto 0 auto;
+    }
+    .section-features .long-copy {
+        margin-bottom: 20px;
+    }
+    section h3 {
+        font-size: 110%;
+        margin-bottom: 10px;
+    }
+    section .app-screen {
+        height: 22em;
+    }
+    .step:first-child {
+        margin-top: 20px;
+    }
+    section .span-1-of-2 {
+        width: 45%;
+    }
+    section .btn-app img {
+        height: 24px;
+        margin-right: 4px;
+        margin-left: 4px;
+    }
+    section .work-steps div {margin-right: 10px;}
+    section .step:first-child {
+        margin-top: 14px;
+    }
+    section .step:last-child {
+        margin-top: 4.5em;
+        width: 54%;
+    }
+    section blockquote {
+        line-height: 130%;
+        margin-top: 30px;
+        padding-left: 1.5rem;
+    }
+    section blockquote::before { font-size: 450%; left: 0.5rem;}
+    section cite {    margin-top: 15px;   }
+    .section-plans .span-1-of-3 {
+        width: 33.3%;
+    }
+    .section-plans h3 {
+        font-size: 100%;
+        margin-bottom: 6px;
+    }
+    section .plan-price {
+        font-size: 170%;
+        margin-bottom: 6px;
+    }
+    section .plan-box div {
+        padding: 5px;
+    }
+    body .btn:link,
+    body .btn:visited,
+    body input[type=submit] {
+        display: inline-block;
+        padding: 6px 12px;
+    }
+    section .contact-form {
+        width: 85%;
+    }
+    .section-form .span-1-of-3 {  width: 32.26%;}
+    .section-form .span-2-of-3 {  width: 66.13%;}
+    .section-form h2 {
+        margin-bottom: 25px;
+    }
+    body footer {
+        padding: 20px;
+        font-size: 70%;
+    }
+    footer .social-links {
+        margin-top: -10px;
+    }
+
+}
+
+/* small phones: from zero to 414px */
+@media only screen and (max-width: 414px) and (min-height: 895px) {
+    html body header {height: 60vh;}
+    
+}
