@@ -309,6 +309,12 @@
     }
     header .main-nav.responsive li:not(:first-child){
         padding-bottom: 0.4rem;
+        margin-right: 0.1rem;
+    }
+    header .sticky-nav .main-nav.main-nav.responsive li:first-child::before {
+        right: -0.05rem;
+        height: 6.2rem;
+        width: 7.89rem;
     }
     header h1 {
         margin-bottom: 15px;
