@@ -98,7 +98,7 @@
     }
     body footer {
         padding: 30px;
-        font-size: 70%;
+        font-size: 80%;
     }
 
 }
@@ -113,11 +113,109 @@
 
 /* small phones to small tablets: from 481 to 767px */
 @media only screen and (max-width: 768px) {
-
-    body {font-size: 15px;}
-
     header .logo {
         height: 65px;
+    }
+/* --------------------------------------------------
+------------   NAVIGATION MENU   --------------------
+--------------------------------------------------- */
+    header .main-nav {
+        position: relative;
+    }
+    header .main-nav li:first-child {
+        display: block;
+        margin-top: 1.3rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    header .main-nav li:first-child a ion-icon[name=close-outline],
+    header .main-nav li {
+        display: none;
+    }
+    header .main-nav li:first-child a ion-icon[name=menu-outline] {
+        display: block;
+    }
+    header .main-nav li:first-child a ion-icon {
+        color: #555;
+        font-size: 340%;
+        --ionicon-stroke-width: 1.5rem;
+        transition: color 0.2s;
+    }
+    header .main-nav li:first-child a ion-icon:hover {
+        color: #e68836;
+    }
+
+    /* ----------------------------------------
+    --------- O N  CLICK ACTION ---------------
+    ---------------------------------------- */
+    header .main-nav.responsive li:first-child a ion-icon[name=menu-outline] {
+        display: none;
+    }
+    header .main-nav.responsive li:first-child a ion-icon[name=close-outline] {
+        display: block;
+    }
+    header .main-nav.responsive li:not(:first-child).list-1 {
+        border-radius: 10px 0 0;
+        margin-top: 1.1rem;
+        padding-top: 2.8rem;
+    }
+    header .main-nav.responsive li:last-child {
+        border-radius: 0 0 10px 10px;
+        padding-bottom: 1rem;
+    }
+    header .main-nav.responsive {
+        z-index: 2;
+    }
+    header .main-nav.responsive li:not(:first-child) {
+        padding-bottom: 0.7rem;
+        padding-left: 0.3rem;
+        display: block;
+        text-align: right;
+        background-color: #252525d0;
+        margin: 0 -0.45rem;
+    }
+    header .main-nav.responsive li:not(:first-child) a {
+        border: 0;
+        margin: 0.8rem;
+        letter-spacing: 1px;
+        font-size: 110%;
+        font-weight: 400;
+        color: rgb(173, 173, 173);
+    }
+    header .main-nav.responsive li:not(:first-child) a:hover {
+        color: #e68836;
+    }
+
+
+    /* ---------------------------------------------
+    ------- sticky navigation fixes --------------
+    ------------------------------------------------ */
+    header .sticky-nav .main-nav li:first-child {
+        margin-top: 0.3rem;
+    }
+    header .sticky-nav .main-nav.responsive li:not(:first-child) {
+        background-color: rgb(252, 250, 249);
+        /* border-right: 2px solid #7575758a;
+        border-left: 2px solid #7575758a; */
+        /* background-color: #e68836; */
+    }
+    header .sticky-nav .main-nav.responsive li:not(:first-child).list-1 {
+        background-image: linear-gradient(rgb(255, 255, 255),rgba(252, 250, 249, 0.918));
+        border-radius: 0;
+        margin-top: 3.1rem;
+        padding-top: 0.8rem;
+    }
+    header .sticky-nav .main-nav.main-nav.responsive li:first-child::before {
+        position: absolute;
+        z-index: -5;
+        top: 2.8rem;
+        right: -0.55rem;
+        border-radius: 0 0 10px 10px;
+        content: ".";
+        height: 7.75rem;
+        width: 9.6rem;
+        background-image: linear-gradient(#e7e7e78a,#d38218d5 90%,#757575d5);
     }
 
     section .box img {border-radius: 2px; }
@@ -146,10 +244,48 @@
 /* single matter at a time */
 
 @media only screen and (max-width: 540px) {
+    body .row {
+        max-width: 100%;
+    }
     .section-features .col {margin: 3%;}
     section .js--wp-1 .span-1-of-4{width: 100%;}
 
     .section-testimonials .span-1-of-3{width: 100%;}
+
+    header .main-nav.responsive li:not(:first-child) a {
+        letter-spacing: 1px;
+        font-size: 90%;
+        font-weight: 400;
+    }
+    header .sticky-nav .main-nav.main-nav.responsive li:first-child::before {
+        right: -0.55rem;
+        height: 7.35rem;
+        width: 8.362rem;
+    }
+
+    header h1 {
+        font-size: 200%;
+        font-weight: 500;
+    }
+    .section-form .col:first-child {
+        margin-left: 5%;
+    }
+    .section-form .span-1-of-3 {
+        width: 90%; 
+        margin: 0;
+    }
+    .section-form .span-2-of-3 {  
+        width: 90%;
+        margin: 0.5rem 5%;
+    }
+    body .footer-nav li {
+        margin-right: 10px;
+    }
+    body footer {
+        padding: 20px;
+        font-weight: 300;
+
+    }
 
 }
 /* small phones: from zero to 480px */
@@ -159,39 +295,38 @@
         max-width: 100%;
         margin: 0 2%;
     }
-
-    body {font-size: 10px;}
-
-    header .main-nav li:last-child {margin-right: 10px;}
-    header .main-nav li {
-        margin-left: 13px;
-        margin-top: 15%;
-    }
-    header .main-nav li a:link, .main-nav li a:visited {
-        padding: 6px 0;}
     header .logo {
         margin-left: 12px;
         height: 55px;
         margin-top: 19px;
     }
+    header .main-nav.responsive li:not(:first-child) a {
+        margin: 0.5rem;
+        letter-spacing: 1px;
+        font-size: 90%;
+        font-weight: 400;
+        color: rgb(173, 173, 173);
+    }
+    header .main-nav.responsive li:not(:first-child){
+        padding-bottom: 0.4rem;
+    }
     header h1 {
         margin-bottom: 15px;
-        font-size: 200%;
         word-spacing: 2px;
     }
     body section {
         padding: 30px 0;
     }
-    .section-features .long-copy {
-        margin-bottom: 20px;
+    section .section-features .long-copy {
+        margin-bottom: 10px;
     }
     section .long-copy {
         line-height: 125%;
-        width: 94%;
+        width: 95%;
         margin-left: 3%;
     }
-    section h2 {
-        font-size: 160%;
+    body section h2 {
+        font-weight: 300;
         margin-bottom: 16px;
     }
     section h2:after {
@@ -201,7 +336,6 @@
         margin-bottom: 20px;
     }
     section h3 {
-        font-size: 110%;
         margin-bottom: 10px;
     }
     section .app-screen {
@@ -256,8 +390,14 @@
     section .contact-form {
         width: 85%;
     }
-    .section-form .span-1-of-3 {  width: 32.26%;}
-    .section-form .span-2-of-3 {  width: 66.13%;}
+    .section-form .span-1-of-3 {
+        width: 80%; 
+        margin: 0 10%;
+    }
+    .section-form .span-2-of-3 {  
+        width: 90%;
+        margin: 0.5rem 5%;
+    }
     .section-form h2 {
         margin-bottom: 25px;
     }

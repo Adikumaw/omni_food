@@ -1,3 +1,16 @@
+// function nav_func() {
+//   var x = document.getElementsByClassName("main-nav");
+//   if (x.className === "main-nav") {
+//     x.className += " responsive";
+//     console.log("hello");
+//     console.log(x.className);
+//   } else {
+//     x.className = "main-nav";
+//     console.log("world");
+//     console.log(x.className);
+//   }
+// }
+
 $(document).ready(function () {
   // for sticky navigation
   $(".js--section-features").waypoint(
@@ -28,10 +41,34 @@ $(document).ready(function () {
     );
   });
 
+// ----------- NAVIGATION MENU  OPEN ON CLICK------------
+  $(".main-nav").click(function (e) {
+    e.preventDefault();
+    var target = $($(this).attr("href"));
+    var x = document.getElementById("nav-bar");
+    if (x.className === "main-nav") {
+      x.className += " responsive";
+    } else {
+      x.className = "main-nav";
+    }
+    if (target.length) {
+      var scrollTo = target.offset().top;
+      $("body, html").animate({ scrollTop: scrollTo + "px" }, 800);
+    }
+  });
+
+
   // anchor scrolls
   $(".js-scroll").click(function (e) {
     e.preventDefault();
     var target = $($(this).attr("href"));
+    var x = document.getElementById("nav-bar");
+    if (x.className === "main-nav") {
+      x.className = "main-nav";
+    } else {
+
+      x.className += " responsive";
+    }
     if (target.length) {
       var scrollTo = target.offset().top;
       $("body, html").animate({ scrollTop: scrollTo + "px" }, 800);
