@@ -98,7 +98,7 @@
     }
     body footer {
         padding: 30px;
-        font-size: 80%;
+        font-size: 100%;
     }
 
 }
@@ -140,7 +140,7 @@
         color: #555;
         font-size: 340%;
         --ionicon-stroke-width: 1.5rem;
-        transition: color 0.2s;
+        transition: color 0.2s ease;
     }
     header .main-nav li:first-child a ion-icon:hover {
         color: #e68836;
@@ -152,8 +152,10 @@
     header .main-nav.responsive li:first-child a ion-icon[name=menu-outline] {
         display: none;
     }
-    header .main-nav.responsive li:first-child a ion-icon[name=close-outline] {
+    header .main-nav.responsive li:first-child a ion-icon,
+    header .main-nav.responsive li:first-child a:visited ion-icon[name=close-outline] {
         display: block;
+        color: #e68836;
     }
     header .main-nav.responsive li:not(:first-child).list-1 {
         border-radius: 10px 0 0;
@@ -215,7 +217,7 @@
         content: ".";
         height: 7.75rem;
         width: 9.6rem;
-        background-image: linear-gradient(#e7e7e78a,#d38218d5 90%,#757575d5);
+        background-image: linear-gradient(#e7e7e78a,#e68836 95%,#808080f5);
     }
 
     section .box img {border-radius: 2px; }
@@ -239,6 +241,28 @@
     .section-cities .col,
     .section-features .col {margin: 2%;}
     section .span-1-of-4{width: 45%;}
+    section.section-plans .span-1-of-3 {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .section-plans h3 {
+        font-size: 200%;
+        margin-bottom: 12px;
+    }
+    section .plan-box ul li {
+        font-size: 90%;
+    }
+
+    section .plan-price {
+        font-size: 360%;
+        margin-bottom: 8px;
+    }
+    section .plan-price-meal {
+        font-size: 90%;
+    }
+    body footer div p {
+        font-size: 80%;
+    }
 }
 
 /* single matter at a time */
@@ -284,7 +308,11 @@
     body footer {
         padding: 20px;
         font-weight: 300;
+        font-size: 100%;
 
+    }
+    body footer div p {
+        font-size: 70%;
     }
 
 }
@@ -312,9 +340,9 @@
         margin-right: 0.1rem;
     }
     header .sticky-nav .main-nav.main-nav.responsive li:first-child::before {
-        right: -0.05rem;
-        height: 6.2rem;
-        width: 7.89rem;
+        right: -0.01rem;
+        height: 6.16rem;
+        width: 7.8rem;
     }
     header h1 {
         margin-bottom: 15px;
@@ -345,26 +373,29 @@
         margin-bottom: 10px;
     }
     section .app-screen {
-        height: 22em;
+        height: 19em;
     }
     .step:first-child {
         margin-top: 20px;
     }
     section .span-1-of-2 {
-        width: 45%;
+        width: 46%;
     }
     section .btn-app img {
-        height: 24px;
+        height: 27px;
         margin-right: 4px;
         margin-left: 4px;
     }
     section .work-steps div {margin-right: 10px;}
     section .step:first-child {
-        margin-top: 14px;
+        margin-top: 12px;
     }
     section .step:last-child {
-        margin-top: 4.5em;
+        margin-top: 2.2em;
         width: 54%;
+    }
+    body section .step:last-child:last-of-type {
+        margin-top: 0;
     }
     section blockquote {
         line-height: 130%;
@@ -373,19 +404,22 @@
     }
     section blockquote::before { font-size: 450%; left: 0.5rem;}
     section cite {    margin-top: 15px;   }
-    .section-plans .span-1-of-3 {
-        width: 33.3%;
+    section .plan-box div {
+        padding: 5px;
     }
     .section-plans h3 {
         font-size: 100%;
-        margin-bottom: 6px;
+        margin-bottom: 12px;
+    }
+    section .plan-box ul li {
+        font-size: 90%;
     }
     section .plan-price {
-        font-size: 170%;
+        font-size: 300%;
         margin-bottom: 6px;
     }
-    section .plan-box div {
-        padding: 5px;
+    section .plan-price-meal {
+        font-size: 90%;
     }
     body .btn:link,
     body .btn:visited,
@@ -407,14 +441,20 @@
     .section-form h2 {
         margin-bottom: 25px;
     }
-    body footer {
-        padding: 20px;
-        font-size: 70%;
+    body footer div .col.span-1-of-2:first-child {
+        width: 60%;
     }
-    footer .social-links {
-        margin-top: -10px;
+    body footer div .col.span-1-of-2:last-child {
+        width: 40%;
     }
-
+    body .footer-nav li,
+    body .social-links li {
+        margin: 5px 10px 0 0;
+    }
+    body .social-links {
+    margin-top: 0px;
+    font-size: 85%;
+    }
 }
 
 /* small phones: from zero to 414px */

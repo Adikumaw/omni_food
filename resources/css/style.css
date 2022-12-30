@@ -571,6 +571,7 @@ textarea {
     F O O T E R
 ---------------------------- -- */
 footer {
+    display: relative;
     background-color: #333;
     padding: 50px;
     font-size: 80%;
@@ -645,3 +646,27 @@ footer p {
 .js--wp-1.animate__animated {
     opacity: 1;
 }
+.swiper {
+    width: 100%;
+    height: fit-content;
+  }
+  .swiper-slide div{
+    width: 100%;
+  }
+  .swiper-pagination {
+    color: #000;
+    z-index: 999;
+  }
+/* __________________________________
+        FADE CSS PROPERTY
+   __________________________________
+   .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+   ___________________________________*/
