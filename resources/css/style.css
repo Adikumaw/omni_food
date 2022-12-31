@@ -18,6 +18,11 @@ html {
     font-size: 20px;
     text-rendering: optimizeLegibility;
 }
+.row {
+    max-width: 100%;
+    margin: 0 5%;
+}
+
 
 .clearfix {zoom: 1}
 .clearfix:after {
@@ -27,12 +32,6 @@ html {
     height: 0;
     visibility: hidden;
 }
-
-.row {
-    max-width: 100%;
-    margin: 0 5%;
-}
-
 section {
     padding: 80px 0;
 }
@@ -74,7 +73,6 @@ header {
 .logo{
     height: 100px;
     width: auto;
-    /* float: left; */
     margin-top: 20px;
 }
 
@@ -113,13 +111,10 @@ header {
     border-bottom: 2px solid #e67e22;
 }
 .main-nav li:first-child,
-.main-nav li:first-child a ion-icon{
+.main-nav li:first-child a ion-icon,
+.sticky-nav .logo {
     display: none;
 }
-
-/* .main-nav li:last-of-type {
-    display: none;
-} */
 /*----------------------------------------
  sticky nav
  ---------------------------------------*/
@@ -141,7 +136,6 @@ header {
     padding: 8px 0;
     color: #555;
 }
-.sticky-nav .logo { display: none; }
 .sticky-nav .logo-black { display: block;}
 
 /*----------------------------------------
@@ -197,15 +191,17 @@ h2:after {
 
 /* ---------PARAGRAPHS---------- */
 .long-copy {
-    line-height: 145%;
     width: 70%;
     margin-left: 15%;
     text-align: center;
 }
-
 .box p {
     font-size: 90%;
-    line-height: 145%;
+}
+.long-copy,
+.box p { line-height: 145%; }
+.section-features .long-copy {
+    margin-bottom: 1rem;
 }
 
 /* ------ ICONS ------ */
@@ -233,20 +229,6 @@ input[type=submit] {
     border: 1px solid #e67e22;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
-.btn-full:link,
-.btn-full:visited,
-input[type=submit] {
-    margin: 0 1% 1% 0;
-    background-color: #e67e22;
-}
-.btn-ghost:link,
-.btn-ghost:visited {
-    color: #e67e22;
-}
-/*----------------------------------------
-    button 
-    hover and active........ 
-    -------------------------------------*/
 .btn:hover,
 .btn:active,
 input[type=submit]:hover,
@@ -254,20 +236,23 @@ input[type=submit]:active {
     border: 1px solid #cf6d17;
     background-color: #cf6d17;
 }
-/* .btn-full:hover,
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    margin: 0 1% 1% 0;
+    background-color: #e67e22;
+}
+.btn-full:hover,
 .btn-full:active {
     background-color: #cf6d17;
-} */
+}
+.btn-ghost:link,
+.btn-ghost:visited {
+    color: #e67e22;
+}
 .btn-ghost:hover,
 .btn-ghost:active {
     color: #fff;
-}
-
-/*----------------------------------------
-    FEATURES
- ---------------------------------------*/
-.section-features .long-copy {
-    margin-bottom: 1rem;
 }
 
 /*----------------------------------------
@@ -296,6 +281,19 @@ input[type=submit]:active {
     background-color: #000;
     border-radius: 15px;
 }
+.meal-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1,1.09);
+    transition: transform 0.5s, opacity 0.5s; 
+}
+.meal-photo:hover img {
+    opacity: 1;
+    transform: scale(1.15);
+    filter: blur(4px);
+}
+/* TEXT ON MEAL PHOTO */
 .meal-photo span {
     position: absolute;
     color: rgb(234, 234, 234);
@@ -328,24 +326,10 @@ input[type=submit]:active {
     transform: translate(-50%,-50%);
     opacity: 0.9;
 }
-.meal-photo img {
-    opacity: 0.7;
-    width: 100%;
-    height: auto;
-    transform: scale(1,1.09);
-    transition: transform 0.5s, opacity 0.5s; 
-}
-.meal-photo:hover img {
-    opacity: 1;
-    transform: scale(1.15);
-    filter: blur(4px);
-}
 
 /* ------------------------------------
     SECTION THIRD HOW IT WORKS
     -----------------------------------*/
-
-
 .section-steps {
     background-color: rgb(243, 242, 242);
 }
@@ -642,21 +626,19 @@ footer p {
     opacity: 0;
     animation-duration: 2s;
 }
-
-.js--wp-1.animate__animated {
+.js--wp-4,
+.js--wp-3,
+.js--wp-2 {
+    opacity: 0;
+    animation-duration: 1s;
+}
+.js--wp-1.animate__animated,
+.js--wp-2.animate__animated,
+.js--wp-3.animate__animated {
     opacity: 1;
 }
-.swiper {
-    width: 100%;
-    height: fit-content;
-  }
-  .swiper-slide div{
-    width: 100%;
-  }
-  .swiper-pagination {
-    color: #000;
-    z-index: 999;
-  }
+
+
 /* __________________________________
         FADE CSS PROPERTY
    __________________________________
@@ -670,3 +652,5 @@ footer p {
   to {opacity: 1}
 }
    ___________________________________*/
+
+   /* SWIPER FRAMEWORK FOR SLIDER ANIMATION */

@@ -1,4 +1,14 @@
 
+@media only screen and (max-height: 739px){
+    html body header{height: 100vh;}
+}
+@media only screen and (max-width: 912px) and (min-height: 667px) {
+    html body header{height: 55vh;}
+}
+@media only screen and (max-width: 414px) and (min-height: 895px) {
+    html body header {height: 60vh;}
+}
+
 /* this is from big tablets to 1200 */
 @media only screen and (max-width: 1220px) {
 
@@ -26,16 +36,13 @@
     body section {padding: 60px 0; }
     header .logo {
         height: 90px;
-        width: auto;
-        /* float: left; */
-        margin-top: 20px;
     }
     section .long-copy {
-        line-height: 135%;
         width: 80%;
         margin-left: 10%;
     }
-    section .box p {
+    section .box p,
+    section .long-copy {
         line-height: 135%;
     }
     section .work-steps:last-of-type {
@@ -43,7 +50,6 @@
     }
     section .btn-app img {
         height: 45px;
-        width: auto;
     }
     section .contact-form {
         width: 70%;
@@ -103,14 +109,6 @@
 
 }
 
-@media only screen and (max-height: 739px){
-    html body header{height: 100vh;}
-}
-
-@media only screen and (max-width: 912px) and (min-height: 667px) {
-    html body header{height: 55vh;}
-}
-
 /* small phones to small tablets: from 481 to 767px */
 @media only screen and (max-width: 768px) {
     header .logo {
@@ -123,7 +121,6 @@
         position: relative;
     }
     header .main-nav li:first-child {
-        display: block;
         margin-top: 1.3rem;
         position: absolute;
         top: 0;
@@ -133,7 +130,8 @@
     header .main-nav li {
         display: none;
     }
-    header .main-nav li:first-child a ion-icon[name=menu-outline] {
+    header .main-nav li:first-child a ion-icon[name=menu-outline],
+    header .main-nav li:first-child {
         display: block;
     }
     header .main-nav li:first-child a ion-icon {
@@ -308,17 +306,14 @@
     body footer {
         padding: 20px;
         font-weight: 300;
-        font-size: 100%;
 
     }
     body footer div p {
         font-size: 70%;
     }
-
 }
 /* small phones: from zero to 480px */
 @media only screen and (max-width: 480px) {
-
     body .row {
         max-width: 100%;
         margin: 0 2%;
@@ -458,7 +453,3 @@
 }
 
 /* small phones: from zero to 414px */
-@media only screen and (max-width: 414px) and (min-height: 895px) {
-    html body header {height: 60vh;}
-    
-}

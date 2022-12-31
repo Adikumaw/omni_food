@@ -1,6 +1,7 @@
-# omni_food
 
 # omni_food
 
 hello every one this is just another repository
-don't take it serious
+don't take it serious...
+
+Thanks... :)

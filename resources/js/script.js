@@ -1,18 +1,8 @@
-// function nav_func() {
-//   var x = document.getElementsByClassName("main-nav");
-//   if (x.className === "main-nav") {
-//     x.className += " responsive";
-//     console.log("hello");
-//     console.log(x.className);
-//   } else {
-//     x.className = "main-nav";
-//     console.log("world");
-//     console.log(x.className);
-//   }
-// }
 
 $(document).ready(function () {
-  // for sticky navigation
+//   =======================================================================================================
+//                                         STICKY NAVIGATION
+// 
   $(".js--section-features").waypoint(
     function (direction) {
       if (direction == "down") {
@@ -26,7 +16,9 @@ $(document).ready(function () {
     }
   );
 
-  // scrol on button
+//   =======================================================================================================
+//                                           SCROLL BUTTONS
+// 
   $(".js--scroll-to-plans").click(function () {
     $("html,body").animate(
       { scrollTop: $(".js--section-plans").offset().top },
@@ -41,10 +33,14 @@ $(document).ready(function () {
     );
   });
 
-// ----------- NAVIGATION MENU  OPEN ON CLICK------------
+//   =======================================================================================================
+//                                   NAVIGATION MENU OPEN ON CLICK
+// 
   $(".main-nav").click(function (e) {
     e.preventDefault();
     var target = $($(this).attr("href"));
+    // alternate option .......
+    // var x = $(".nav-bar");
     var x = document.getElementById("nav-bar");
     if (x.className === "main-nav") {
       x.className += " responsive";
@@ -57,8 +53,9 @@ $(document).ready(function () {
     }
   });
 
-
-  // anchor scrolls
+//   =======================================================================================================
+//                                            ANCHOR SCROLLS
+// 
   $(".js-scroll").click(function (e) {
     e.preventDefault();
     var target = $($(this).attr("href"));
@@ -66,7 +63,6 @@ $(document).ready(function () {
     if (x.className === "main-nav") {
       x.className = "main-nav";
     } else {
-
       x.className += " responsive";
     }
     if (target.length) {
@@ -75,8 +71,10 @@ $(document).ready(function () {
     }
   });
 
-  // animations on scroll
-
+//   =======================================================================================================
+//                                            ANIMATION ON SCROLL
+// 
+  // SECTION FEATURES...............
   $(".js--wp-1").waypoint(
     function (direction) {
       $(".js--wp-1").addClass("animate__animated animate__fadeInLeft");
@@ -85,22 +83,45 @@ $(document).ready(function () {
       offset: "80%",
     }
   );
+    // SECTION HOW IT WORKS...............
+  $(".js--wp-2").waypoint(
+    function (direction) {
+      $(".js--wp-2").addClass("animate__animated animate__fadeInUp");
+    },
+    {
+      offset: "50%",
+    }
+  );
+    // SECTION CITIES...............
+  $(".js--wp-3").waypoint(
+    function (direction) {
+      $(".js--wp-3").addClass("animate__animated animate__fadeIn");
+    },
+    {
+      offset: "50%",
+    }
+  );
+    // SECTION PLANS...............
+  $(".js--wp-4").waypoint(
+    function (direction) {
+      $(".js--wp-4").addClass("animate__animated animate__pulse");
+    },
+    {
+      offset: "50%",
+    }
+  );
+
 });
 
-const swiper = new Swiper('.swiper', {
-autoplay: {
-  delay: 1000,
-  disableOnInteraction: false,
-},
-  loop: true,
-
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
+// function nav_func() {
+//   var x = document.getElementsByClassName("main-nav");
+//   if (x.className === "main-nav") {
+//     x.className += " responsive";
+//     console.log("hello");
+//     console.log(x.className);
+//   } else {
+//     x.className = "main-nav";
+//     console.log("world");
+//     console.log(x.className);
+//   }
+// }
